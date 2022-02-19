@@ -13,7 +13,7 @@ window.addEventListener("load", function() {
 
 // Essa função realiza o "checkbox", na escolha do seu gênero. _>
 
-function tickmark() {
+function tickmark1() {
     var x = document.getElementById('tick-feminino');
     if (x.style.display === "flex") {
         x.style.display = "none";
@@ -21,3 +21,14 @@ function tickmark() {
         x.style.display = "flex"
     }
 }
+
+function tickmark2() {
+    var x = document.getElementById('tick-masculino');
+    if (x.style.display === "flex") {
+        x.style.display = "none";
+    } else {
+        x.style.display = "flex"
+    }
+}
+
+

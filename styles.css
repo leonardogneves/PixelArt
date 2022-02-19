@@ -24,8 +24,8 @@
     top:0; left:0;
     width:100%; height:100%;
     opacity:1;
-    background-color:#06060c;
-    background-image:url(img/Mario\ Load.gif);
+    background-color:#180116;
+    background-image:url(img/loading.gif);
     background-size:298px 298px;
     background-position:center;
     background-repeat:no-repeat;
@@ -36,22 +36,58 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #310b04;
+    background-color: #180116;
 }
+
+/*Esse seria o titulo do "ESCOLHA SEU PERSONAGEM"*/
+
+.title{
+  position: absolute;
+  bottom: 800px;
+  font-family: "PIXEL ART";
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+      font-size: 18px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% top;
+  }
+}
+
+
+/*escolha do personagem feminino*/
 
 .frem-feminino{
     width: 13rem;
     height: 13rem;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 
 .frem-feminino .chak-feminino{
-    width: 170px;
-    height: 170px;
+    width: 165px;
+    height: 165px;
+    margin-right: -228px;
     position: absolute;
-    background-color: #00ff43;
+    background-color: #01ff23;
     border-radius: 50%;
     display: none;
     justify-content: flex-end;
@@ -76,3 +112,130 @@ body{
     cursor: pointer;
     z-index: 1;
 }
+
+/*escolha do personagem masculino*/
+
+
+.frem-masculino{
+    width: 13rem;
+    height: 13rem;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    margin-left: -710px;
+}
+
+.frem-masculino .chak-masculino{
+    width: 165px;
+    height: 165px;
+    position: absolute;
+    background-color: #01ff23;
+    border-radius: 50%;
+    display: none;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-left: -23px;
+}
+
+.frem-masculino .chak-masculino img{
+    width: 51px;
+    z-index: 2;
+    position: absolute;
+    right: 7px;
+}
+
+.frem-masculino .logo-masculino{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    background: url(./img/Homem.jpg);
+    background-position: -32px -20px;
+    background-size: 13rem;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    z-index: 1;
+}
+
+/*botão de continuar*/
+
+.button {
+    min-width: 300px;
+    min-height: 60px;
+    font-family: 'PIXEL ART', sans-serif;
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    font-weight: 700;
+    color: #ffffff;
+    background: #4FD1C5;
+  background: linear-gradient(90deg, rgb(132, 27, 146) 0%, rgb(74, 2, 83) 100%);
+    border: none;
+    border-radius: 1000px;
+    box-shadow: 12px 12px 24px rgba(192, 66, 192, 0.64);
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    position: absolute;
+    padding: 10px;
+    margin-top: 198px;
+    margin-left: -115px;
+    }
+  
+  button::before {
+  content: '';
+    border-radius: 1000px;
+    min-width: calc(300px + 12px);
+    min-height: calc(60px + 12px);
+    border: 6px solid #ff00ea;
+    box-shadow: 0 0 60px rgba(255, 0, 212, 0.64);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all .3s ease-in-out 0s;
+  }
+  
+  .button:hover, .button:focus {
+    color: #525155;
+    transform: translateY(-6px);
+  }
+  
+  button:hover::before, button:focus::before {
+    opacity: 1;
+  }
+  
+  button::after {
+    content: '';
+    width: 30px; height: 30px;
+    border-radius: 100%;
+    border: 6px solid #921392;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ring 1.5s infinite;
+  }
+  
+  button:hover::after, button:focus::after {
+    animation: none;
+    display: none;
+  }
+  
+  @keyframes ring {
+    0% {
+      width: 30px;
+      height: 30px;
+      opacity: 1;
+    }
+    100% {
+      width: 300px;
+      height: 300px;
+      opacity: 0;
+    }
+  }
+
+
+
