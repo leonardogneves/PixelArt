@@ -37,6 +37,10 @@ body{
     justify-content: center;
     align-items: center;
     background-color: #180116;
+    background-image: url(img/teste1.gif);
+    background-position: 100%;
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
 /*Esse seria o titulo do "ESCOLHA SEU PERSONAGEM"*/
@@ -169,7 +173,7 @@ body{
     font-weight: 700;
     color: #ffffff;
     background: #4FD1C5;
-  background: linear-gradient(90deg, rgb(132, 27, 146) 0%, rgb(74, 2, 83) 100%);
+  background: linear-gradient(90deg, rgb(97, 25, 107) 0%, rgb(74, 2, 83) 100%);
     border: none;
     border-radius: 1000px;
     box-shadow: 12px 12px 24px rgba(192, 66, 192, 0.64);
@@ -178,7 +182,7 @@ body{
     outline: none;
     position: absolute;
     padding: 10px;
-    margin-top: 198px;
+    margin-top: 238px;
     margin-left: -115px;
     }
   
